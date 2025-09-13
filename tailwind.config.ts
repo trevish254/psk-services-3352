@@ -33,18 +33,16 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				aventis: {
-					yellow: {
-						DEFAULT: '#fcb603', // Primary yellow
-						light: '#fdd835', // Lighter yellow
-						dark: '#f57c00', // Darker yellow
-						muted: 'rgba(252, 182, 3, 0.1)' // Transparent yellow for backgrounds
-					},
-					black: {
-						DEFAULT: '#121212', // Deep black
-						light: '#1E1E1E', // Lighter black
-						card: 'rgba(30, 30, 30, 0.7)' // Semi-transparent black for cards
-					}
+				'aventis-yellow': {
+					DEFAULT: '#fcb603',
+					light: '#fdd835',
+					dark: '#f57c00',
+					muted: '#fcb60319'
+				},
+				'aventis-black': {
+					DEFAULT: '#121212',
+					light: '#1E1E1E',
+					card: '#1E1E1EB3'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

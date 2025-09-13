@@ -71,7 +71,7 @@ const Index = () => {
       </section>
       
       {/* Service Types Section */}
-      <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
+      <section className="py-20 px-6 md:px-12 bg-aventis-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-2">Solutions for Every Business</h2>
@@ -113,7 +113,7 @@ const Index = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 px-6 md:px-12 bg-psyco-black-light relative overflow-hidden">
+      <section className="py-20 px-6 md:px-12 bg-aventis-black-light relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-primary/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>

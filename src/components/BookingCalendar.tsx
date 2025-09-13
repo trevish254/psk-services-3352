@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { Button } from '@/components/ui/button';
@@ -22,8 +21,8 @@ const availableTimeSlots = [
 ];
 
 const eventTypes = [
-  'Concert', 'Corporate Event', 'Wedding', 'Birthday Party',
-  'Festival', 'Conference', 'Club Night', 'Private Party',
+  'Business Consultation', 'Digital Marketing', 'Creative Services', 'Strategic Planning',
+  'Brand Development', 'Website Design', 'SEO Services', 'Social Media Management',
   'Other'
 ];
 
@@ -35,7 +34,7 @@ const BookingCalendar = () => {
     name: '',
     email: '',
     phone: '',
-    location: '',
+    company: '',
     details: ''
   });
 
@@ -50,7 +49,7 @@ const BookingCalendar = () => {
     if (!date || !timeSlot || !eventType) {
       toast({
         title: "Missing information",
-        description: "Please select a date, time slot, and event type",
+        description: "Please select a date, time slot, and service type",
         variant: "destructive"
       });
       return;
@@ -65,7 +64,7 @@ const BookingCalendar = () => {
     });
 
     toast({
-      title: "Booking request submitted!",
+      title: "Consultation request submitted!",
       description: `We'll contact you soon to confirm your ${eventType} on ${format(date, 'MMMM dd, yyyy')} at ${timeSlot}.`,
     });
 
@@ -77,7 +76,7 @@ const BookingCalendar = () => {
       name: '',
       email: '',
       phone: '',
-      location: '',
+      company: '',
       details: ''
     });
   };
@@ -86,7 +85,7 @@ const BookingCalendar = () => {
     <div className="grid gap-8 md:grid-cols-2">
       <div className="glassmorphism p-6 animate-fade-in">
         <div className="flex items-center space-x-2 mb-4">
-          <CalendarClock className="h-5 w-5 text-psyco-green-DEFAULT" />
+          <CalendarClock className="h-5 w-5 text-primary" />
           <h3 className="text-xl font-medium">Select Date & Time</h3>
         </div>
         
@@ -96,17 +95,17 @@ const BookingCalendar = () => {
             selected={date}
             onSelect={setDate}
             disabled={(date) => date < new Date() || date > new Date(new Date().setMonth(new Date().getMonth() + 6))}
-            className="rounded-md border border-psyco-green-muted/50 bg-psyco-black-card"
+            className="rounded-md border border-primary/30 bg-aventis-black-card"
           />
         </div>
         
         <div className="mt-6">
           <label className="block text-gray-300 mb-2">Select Time Slot</label>
           <Select value={timeSlot} onValueChange={setTimeSlot}>
-            <SelectTrigger className="bg-psyco-black-DEFAULT border-psyco-green-muted/50">
+            <SelectTrigger className="bg-aventis-black-DEFAULT border-primary/30">
               <SelectValue placeholder="Select a time slot" />
             </SelectTrigger>
-            <SelectContent className="bg-psyco-black-light border-psyco-green-muted/50">
+            <SelectContent className="bg-aventis-black-light border-primary/30">
               {availableTimeSlots.map(time => (
                 <SelectItem key={time} value={time}>{time}</SelectItem>
               ))}
@@ -115,12 +114,12 @@ const BookingCalendar = () => {
         </div>
         
         <div className="mt-4">
-          <label className="block text-gray-300 mb-2">Event Type</label>
+          <label className="block text-gray-300 mb-2">Service Type</label>
           <Select value={eventType} onValueChange={setEventType}>
-            <SelectTrigger className="bg-psyco-black-DEFAULT border-psyco-green-muted/50">
-              <SelectValue placeholder="Select event type" />
+            <SelectTrigger className="bg-aventis-black-DEFAULT border-primary/30">
+              <SelectValue placeholder="Select service type" />
             </SelectTrigger>
-            <SelectContent className="bg-psyco-black-light border-psyco-green-muted/50">
+            <SelectContent className="bg-aventis-black-light border-primary/30">
               {eventTypes.map(type => (
                 <SelectItem key={type} value={type}>{type}</SelectItem>
               ))}
@@ -131,7 +130,7 @@ const BookingCalendar = () => {
       
       <div className="glassmorphism p-6 animate-fade-in animation-delay-100">
         <div className="flex items-center space-x-2 mb-4">
-          <MessageSquare className="h-5 w-5 text-psyco-green-DEFAULT" />
+          <MessageSquare className="h-5 w-5 text-primary" />
           <h3 className="text-xl font-medium">Contact Information</h3>
         </div>
         
@@ -144,7 +143,7 @@ const BookingCalendar = () => {
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="bg-psyco-black-light border-psyco-green-muted/50"
+              className="bg-aventis-black-light border-primary/30"
             />
           </div>
           
@@ -157,7 +156,7 @@ const BookingCalendar = () => {
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="bg-psyco-black-light border-psyco-green-muted/50"
+              className="bg-aventis-black-light border-primary/30"
             />
           </div>
           
@@ -169,40 +168,40 @@ const BookingCalendar = () => {
               value={formData.phone}
               onChange={handleInputChange}
               required
-              className="bg-psyco-black-light border-psyco-green-muted/50"
+              className="bg-aventis-black-light border-primary/30"
             />
           </div>
           
           <div>
-            <label htmlFor="location" className="block text-gray-300 mb-1">Event Location</label>
+            <label htmlFor="company" className="block text-gray-300 mb-1">Company Name</label>
             <Input
-              id="location"
-              name="location"
-              value={formData.location}
+              id="company"
+              name="company"
+              value={formData.company}
               onChange={handleInputChange}
               required
-              className="bg-psyco-black-light border-psyco-green-muted/50"
+              className="bg-aventis-black-light border-primary/30"
             />
           </div>
           
           <div>
-            <label htmlFor="details" className="block text-gray-300 mb-1">Event Details</label>
+            <label htmlFor="details" className="block text-gray-300 mb-1">Project Details</label>
             <Textarea
               id="details"
               name="details"
               rows={3}
               value={formData.details}
               onChange={handleInputChange}
-              className="bg-psyco-black-light border-psyco-green-muted/50"
-              placeholder="Please provide any specific requirements or details about your event"
+              className="bg-aventis-black-light border-primary/30"
+              placeholder="Please provide any specific requirements or details about your project"
             />
           </div>
           
           <Button 
             type="submit" 
-            className="w-full bg-psyco-green-DEFAULT hover:bg-psyco-green-dark transition-colors"
+            className="w-full bg-primary hover:bg-primary/90 transition-colors"
           >
-            Request Booking
+            Request Consultation
           </Button>
         </form>
       </div>

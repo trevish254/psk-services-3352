@@ -42,14 +42,14 @@ const BlogPost = ({
     >
       <Link to={`/blog/${id}`}>
         <div className="relative h-52 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-t from-psyco-black-DEFAULT to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-aventis-black-DEFAULT to-transparent z-10"></div>
           <img 
             src={imageSrc} 
             alt={title} 
             className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
           />
           <div className="absolute top-4 left-4 z-20">
-            <span className="bg-psyco-green-DEFAULT px-3 py-1 text-xs font-medium text-white rounded-full">
+            <span className="bg-primary px-3 py-1 text-xs font-medium text-primary-foreground rounded-full">
               {category}
             </span>
           </div>
@@ -58,7 +58,7 @@ const BlogPost = ({
       
       <div className="p-6">
         <Link to={`/blog/${id}`}>
-          <h3 className="text-xl font-semibold text-white mb-2 hover:text-psyco-green-light transition-colors">
+          <h3 className="text-xl font-semibold text-white mb-2 hover:text-primary transition-colors">
             {title}
           </h3>
         </Link>

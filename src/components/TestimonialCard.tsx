@@ -32,12 +32,12 @@ const TestimonialCard = ({
       )}
       style={style}
     >
-      <div className="absolute top-6 right-6 text-psyco-green-DEFAULT opacity-20">
+      <div className="absolute top-6 right-6 text-primary opacity-20">
         <Quote size={48} />
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4 mb-4 items-start sm:items-center">
-        <div className="h-16 w-16 rounded-full overflow-hidden border-2 border-psyco-green-muted flex-shrink-0">
+        <div className="h-16 w-16 rounded-full overflow-hidden border-2 border-primary/30 flex-shrink-0">
           <img 
             src={imageSrc} 
             alt={name} 
@@ -56,7 +56,7 @@ const TestimonialCard = ({
                 key={i} 
                 size={14}
                 className={cn(
-                  i < rating ? "text-psyco-green-light fill-psyco-green-light" : "text-gray-500"
+                  i < rating ? "text-primary fill-primary" : "text-gray-500"
                 )}
               />
             ))}
