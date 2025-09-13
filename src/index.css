@@ -13,24 +13,24 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 160 84% 39%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 40 97% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 160 84% 39%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 40 97% 50%;
+    --secondary-foreground: 0 0% 0%;
 
     --muted: 0 0% 16%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 160 84% 39%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 40 97% 50%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 160 84% 39%;
+    --ring: 40 97% 50%;
 
     --radius: 0.75rem;
   }
@@ -53,17 +53,17 @@
 
 @layer components {
   .glassmorphism {
-    @apply backdrop-blur-lg bg-black/70 border border-green-500/10 rounded-xl;
-    box-shadow: 0 4px 30px rgba(16, 185, 129, 0.1);
+    @apply backdrop-blur-lg bg-black/70 border border-primary/10 rounded-xl;
+    box-shadow: 0 4px 30px hsl(var(--primary) / 0.1);
   }
   
   .card-hover {
     @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
-    box-shadow: 0 4px 10px rgba(16, 185, 129, 0);
+    box-shadow: 0 4px 10px hsl(var(--primary) / 0);
   }
   
   .card-hover:hover {
-    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 8px 20px hsl(var(--primary) / 0.2);
   }
   
   .btn-glow {
@@ -79,7 +79,7 @@
   }
   
   .text-glow {
-    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
   }
   
   .section-padding {
@@ -97,7 +97,7 @@
     left: 0;
     height: 2px;
     width: 0;
-    background-color: #10B981;
+    background-color: hsl(var(--primary));
     transition: all 0.3s;
   }
   
@@ -107,22 +107,22 @@
 }
 
 .calendar-container .react-calendar {
-  @apply glassmorphism border-green-500/10 p-4;
+  @apply glassmorphism border-primary/10 p-4;
 }
 
 .calendar-container .react-calendar__tile--active {
-  @apply bg-green-500 text-white;
+  @apply bg-primary text-primary-foreground;
 }
 
 .calendar-container .react-calendar__tile--now {
-  @apply bg-green-500/10 text-green-500;
+  @apply bg-primary/10 text-primary;
 }
 
 .calendar-container .react-calendar__navigation button:enabled:hover,
 .calendar-container .react-calendar__navigation button:enabled:focus,
 .calendar-container .react-calendar__tile:enabled:hover,
 .calendar-container .react-calendar__tile:enabled:focus {
-  @apply bg-green-500/10 text-white;
+  @apply bg-primary/10 text-white;
 }
 
 /* Custom scrollbar */
@@ -136,9 +136,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-green-700 rounded-full;
+  @apply bg-primary/70 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-green-500;
+  @apply bg-primary;
 }

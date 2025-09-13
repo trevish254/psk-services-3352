@@ -33,12 +33,12 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				psyco: {
-					green: {
-						DEFAULT: '#10B981', // Primary green
-						light: '#34D399', // Lighter green
-						dark: '#059669', // Darker green
-						muted: 'rgba(16, 185, 129, 0.1)' // Transparent green for backgrounds
+				aventis: {
+					yellow: {
+						DEFAULT: '#fcb603', // Primary yellow
+						light: '#fdd835', // Lighter yellow
+						dark: '#f57c00', // Darker yellow
+						muted: 'rgba(252, 182, 3, 0.1)' // Transparent yellow for backgrounds
 					},
 					black: {
 						DEFAULT: '#121212', // Deep black
