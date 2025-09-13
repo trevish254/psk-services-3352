@@ -32,13 +32,13 @@ const ServiceCard = ({
       style={style}
     >
         <div className="relative h-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-aventis-black-DEFAULT to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10"></div>
         <img 
           src={imageSrc} 
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute top-4 left-4 z-20 bg-aventis-black-card p-2 rounded-lg">
+        <div className="absolute top-4 left-4 z-20 bg-card p-2 rounded-lg">
           <div className="text-primary">
             {icon}
           </div>
@@ -46,8 +46,8 @@ const ServiceCard = ({
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-        <p className="text-gray-300 mb-4 text-sm">{description}</p>
+        <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
+        <p className="text-muted-foreground mb-4 text-sm">{description}</p>
         <Link 
           to={link}
           className="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 text-sm font-medium"

@@ -43,8 +43,8 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-2">Our Services</h2>
-              <p className="text-gray-400 max-w-2xl">
+              <h2 className="text-3xl font-bold text-foreground mb-2">Our Services</h2>
+              <p className="text-muted-foreground max-w-2xl">
                 Professional business solutions tailored to accelerate your growth and success
               </p>
             </div>
@@ -71,11 +71,11 @@ const Index = () => {
       </section>
       
       {/* Service Types Section */}
-      <section className="py-20 px-6 md:px-12 bg-aventis-black-light">
+      <section className="py-20 px-6 md:px-12 bg-muted">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-2">Solutions for Every Business</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-2">Solutions for Every Business</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               We provide comprehensive business solutions across multiple industries and specialties
             </p>
           </div>
@@ -95,7 +95,7 @@ const Index = () => {
                 <div className="text-primary mb-4">
                   {business.icon}
                 </div>
-                <h3 className="text-lg font-medium text-white">{business.name}</h3>
+                <h3 className="text-lg font-medium text-foreground">{business.name}</h3>
               </div>
             ))}
           </div>
@@ -113,15 +113,15 @@ const Index = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 px-6 md:px-12 bg-aventis-black-light relative overflow-hidden">
+      <section className="py-20 px-6 md:px-12 bg-muted relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-primary/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
               Let's work together to unlock your business potential. Start your journey with Aventis Services today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

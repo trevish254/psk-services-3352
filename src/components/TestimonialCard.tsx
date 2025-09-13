@@ -46,8 +46,8 @@ const TestimonialCard = ({
         </div>
         
         <div>
-          <h4 className="text-lg font-medium text-white">{name}</h4>
-          <p className="text-sm text-gray-400">
+          <h4 className="text-lg font-medium text-foreground">{name}</h4>
+          <p className="text-sm text-muted-foreground">
             {position}, {company}
           </p>
           <div className="flex mt-1">
@@ -56,7 +56,7 @@ const TestimonialCard = ({
                 key={i} 
                 size={14}
                 className={cn(
-                  i < rating ? "text-primary fill-primary" : "text-gray-500"
+                  i < rating ? "text-primary fill-primary" : "text-muted-foreground"
                 )}
               />
             ))}
@@ -64,7 +64,7 @@ const TestimonialCard = ({
         </div>
       </div>
       
-      <p className="text-gray-300 relative z-10">"{testimonial}"</p>
+      <p className="text-muted-foreground relative z-10">"{testimonial}"</p>
     </div>
   );
 };

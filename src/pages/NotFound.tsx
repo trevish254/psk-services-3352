@@ -14,14 +14,14 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-aventis-black-DEFAULT px-6">
+    <div className="min-h-screen flex items-center justify-center bg-background px-6">
       <div className="glassmorphism p-12 text-center max-w-md animate-fade-in">
         <div className="flex justify-center mb-6">
           <AlertTriangle size={60} className="text-primary" />
         </div>
-        <h1 className="text-4xl font-bold mb-4 text-white">404</h1>
-        <p className="text-xl text-gray-300 mb-6">Oops! Page not found</p>
-        <p className="text-gray-400 mb-8">
+        <h1 className="text-4xl font-bold mb-4 text-foreground">404</h1>
+        <p className="text-xl text-muted-foreground mb-6">Oops! Page not found</p>
+        <p className="text-muted-foreground mb-8">
           The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </p>
         <Link

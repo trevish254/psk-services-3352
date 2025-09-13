@@ -4,6 +4,38 @@
 
 @layer base {
   :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 40 97% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 40 97% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
     --background: 0 0% 7%;
     --foreground: 0 0% 98%;
 
@@ -16,14 +48,14 @@
     --primary: 40 97% 50%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 40 97% 50%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 16%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 40 97% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 0 0% 16%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -31,8 +63,6 @@
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 40 97% 50%;
-
-    --radius: 0.75rem;
   }
 
   * {
@@ -53,8 +83,12 @@
 
 @layer components {
   .glassmorphism {
-    @apply backdrop-blur-lg bg-black/70 border border-primary/10 rounded-xl;
+    @apply backdrop-blur-lg bg-background/80 border border-primary/20 rounded-xl;
     box-shadow: 0 4px 30px hsl(var(--primary) / 0.1);
+  }
+  
+  .dark .glassmorphism {
+    @apply bg-black/70 border-primary/10;
   }
   
   .card-hover {

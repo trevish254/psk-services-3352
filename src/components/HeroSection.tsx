@@ -57,7 +57,7 @@ const HeroSection = () => {
               Transform Your <span className="text-primary">Business</span> Success
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Strategic business consulting and digital solutions that accelerate your growth. 
               From startups to enterprises, we deliver exceptional results that drive success.
             </p>

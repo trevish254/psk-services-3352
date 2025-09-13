@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,14 +54,14 @@ const Navbar = () => {
         </NavLink>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
                 cn(
-                  'text-white hover:text-primary transition-colors duration-300 link-hover text-sm font-medium tracking-wide',
+                  'text-foreground hover:text-primary transition-colors duration-300 link-hover text-sm font-medium tracking-wide',
                   isActive && 'text-primary after:w-full'
                 )
               }
@@ -68,15 +69,19 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
+          <ThemeToggle />
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <button
-          className="md:hidden text-white hover:text-primary transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center space-x-2">
+          <ThemeToggle />
+          <button
+            className="text-foreground hover:text-primary transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Menu */}
@@ -93,7 +98,7 @@ const Navbar = () => {
               to={link.path}
               className={({ isActive }) =>
                 cn(
-                  'text-white hover:text-primary py-2 text-xl transition-colors duration-300',
+                  'text-foreground hover:text-primary py-2 text-xl transition-colors duration-300',
                   isActive && 'text-primary'
                 )
               }

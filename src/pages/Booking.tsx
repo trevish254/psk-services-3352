@@ -66,8 +66,8 @@ const Booking = () => {
                 <div className="text-primary mb-4 flex justify-center">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-medium text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
+            <h3 className="text-lg font-medium text-foreground">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
                 
                 {index < bookingSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-primary/50">
